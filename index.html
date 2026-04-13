@@ -1,1 +1,424 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TA Portfolio | Unity Pipeline & Shader Dev</title>
+    <style>
+        :root {
+            --bg-dark: #0f0f13;
+            --card-bg: #1a1a24;
+            --accent-blue: #4a9eff;
+            --accent-green: #00d26a;
+            --text-primary: #eaeef2;
+            --text-secondary: #8a94a6;
+            --border-glow: 0 0 15px rgba(74, 158, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+
+        /* Add Inter font */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header / Hero */
+        .hero {
+            margin-bottom: 3rem;
+            border-bottom: 1px solid #2a2a3a;
+            padding-bottom: 2rem;
+        }
+
+        .badge {
+            background: rgba(74, 158, 255, 0.15);
+            color: var(--accent-blue);
+            padding: 0.25rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: inline-block;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(74, 158, 255, 0.2);
+            backdrop-filter: blur(5px);
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight {
+            color: var(--accent-blue);
+            background: linear-gradient(135deg, #4a9eff, #9d4aff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .subhead {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin: 1.5rem 0;
+        }
+
+        .tech-tag {
+            background: #252536;
+            padding: 0.4rem 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border-left: 3px solid var(--accent-blue);
+            color: #c0caf5;
+        }
+
+        .contact-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .contact-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-links a:hover {
+            color: var(--accent-blue);
+        }
+
+        /* Project Cards */
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .section-title span {
+            background: var(--accent-blue);
+            height: 4px;
+            width: 60px;
+            border-radius: 4px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 1.8rem;
+            border: 1px solid #2f2f45;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: var(--border-glow);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: #4a9eff40;
+            box-shadow: 0 20px 30px -10px rgba(0,0,0,0.5);
+        }
+
+        .project-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-card h3 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-sub {
+            color: var(--accent-green);
+            font-weight: 500;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .metric-box {
+            background: #0f0f18;
+            border-radius: 12px;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            display: flex;
+            justify-content: space-around;
+            border: 1px dashed #3a3a55;
+        }
+
+        .metric-item {
+            text-align: center;
+        }
+
+        .metric-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--accent-green);
+        }
+
+        .metric-label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .code-snippet {
+            background: #0b0b12;
+            padding: 0.8rem;
+            border-radius: 8px;
+            font-family: 'SF Mono', 'Menlo', monospace;
+            font-size: 0.8rem;
+            border-left: 3px solid var(--accent-blue);
+            margin-top: 1rem;
+            color: #a9b1d6;
+        }
+
+        .debug-view {
+            width: 100%;
+            height: 120px;
+            background: linear-gradient(90deg, #00d26a 0%, #ffc107 50%, #f43f5e 100%);
+            border-radius: 8px;
+            margin: 1rem 0;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            padding: 0.5rem;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: black;
+        }
+
+        .debug-view span:first-child { color: white; text-shadow: 0 0 5px black; }
+        .debug-view span:last-child { color: white; text-shadow: 0 0 5px black; }
+
+        .footer {
+            margin-top: 4rem;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            border-top: 1px solid #2a2a3a;
+            padding-top: 2rem;
+        }
+
+        /* TA-specific "Before/After" */
+        .comparison {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        .bad {
+            background: #2d1a1a;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            color: #f87171;
+            font-size: 0.8rem;
+        }
+        .good {
+            background: #1a2d1a;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            color: #4ade80;
+            font-size: 0.8rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- HERO SECTION -->
+        <div class="hero">
+            <div class="badge">⚡ OPEN TO WORK · UNITY TECHNICAL ARTIST</div>
+            <h1>Pipeline & Shader<br>Architecture for <span class="highlight">Unity</span></h1>
+            <div class="subhead">I optimize the gap between art and runtime performance.</div>
+            
+            <div class="tech-stack">
+                <span class="tech-tag">Unity URP/HDRP</span>
+                <span class="tech-tag">C# Editor Tooling</span>
+                <span class="tech-tag">Shader Graph / HLSL</span>
+                <span class="tech-tag">Python (Maya/Batch)</span>
+                <span class="tech-tag">Texture Streaming API</span>
+                <span class="tech-tag">Perforce / Git</span>
+            </div>
+            
+            <div class="contact-links">
+                <a href="#">📧 your.email@domain.com</a>
+                <a href="#">💻 github.com/yourusername</a>
+                <a href="#">🔗 linkedin.com/in/yourname</a>
+            </div>
+        </div>
+
+        <!-- PROJECT 1: CAMERA-AWARE TEXEL DENSITY (Unity Focus) -->
+        <div class="section-title">
+            Featured Work <span></span>
+        </div>
+        
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="project-icon">📐🎥</div>
+                <h3>Texel Validator</h3>
+                <div class="project-sub">Unity Editor Tool + Streaming Debug</div>
+                <p>A custom scene view debugger that calculates screen-space texel density per camera, helping artists avoid VRAM waste before runtime.</p>
+                
+                <!-- Visual debug bar (simulated) -->
+                <div class="debug-view">
+                    <span>UNDER (Blurry)</span>
+                    <span>OPTIMAL</span>
+                    <span>OVER (Waste)</span>
+                </div>
+                
+                <div class="metric-box">
+                    <div class="metric-item">
+                        <div class="metric-value">-32%</div>
+                        <div class="metric-label">VRAM Usage</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value">100%</div>
+                        <div class="metric-label">Pop-in Elim.</div>
+                    </div>
+                </div>
+
+                <div class="comparison">
+                    <span class="bad">❌ Before: 4K on distant props</span>
+                    <span class="good">✅ After: Streaming Mips based on Camera</span>
+                </div>
+
+                <div class="code-snippet">
+                    // TA Implementation: Camera Cut Preloader<br>
+                    StreamingController.SetPreloading(cutCamera, true);<br>
+                    texture.requestedMipmapLevel = calculatedMip;<br>
+                    <span style="color:#4a9eff;">// Reduces texture memory 32% in open world</span>
+                </div>
+            </div>
+
+            <!-- PROJECT 2: AUTOMATED LOD / BATCH TOOL -->
+            <div class="project-card">
+                <div class="project-icon">⚙️🐍</div>
+                <h3>Art Pipeline Automator</h3>
+                <div class="project-sub">C# Editor Window + Python Batch</div>
+                <p>One-click solution that processes 500+ assets from Maya FBX to Unity Prefab with correct LOD groups, collision, and material mapping.</p>
+                
+                <div class="metric-box">
+                    <div class="metric-item">
+                        <div class="metric-value">45min</div>
+                        <div class="metric-label">Saved per Batch</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value">0%</div>
+                        <div class="metric-label">Naming Errors</div>
+                    </div>
+                </div>
+
+                <div style="margin: 1rem 0;">
+                    <span class="tech-tag" style="margin-right: 5px;">Unity AssetPostprocessor</span>
+                    <span class="tech-tag" style="margin-right: 5px;">PySide2 UI</span>
+                </div>
+
+                <div class="code-snippet">
+                    [MenuItem("TA Tools/Batch Process FBX")]<br>
+                    static void ProcessAssets() {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;// Auto-assign LOD Group based on naming convention<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;lodGroup.SetLODs(lodArray);<br>
+                    }
+                </div>
+                <p style="margin-top: 1rem; font-style: italic; color: #aaa;">"Eliminated 5 hours of manual prefab setup per week."</p>
+            </div>
+
+            <!-- PROJECT 3: PROCEDURAL SHADER & VFX -->
+            <div class="project-card">
+                <div class="project-icon">✨🔮</div>
+                <h3>Procedural Damage Shader</h3>
+                <div class="project-sub">Shader Graph + Custom HLSL</div>
+                <p>A triplanar, camera-depth-based damage system. As the player camera nears an object, edge wear and scratches intensify based on distance—no texture memory cost.</p>
+                
+                <div style="background:#0d1117; padding: 0.5rem; border-radius: 8px; margin: 1rem 0; text-align: center; color:#58a6ff;">
+                    [ SHADER GRAPH PREVIEW: SCREEN POSITION -> EDGE WEAR ]
+                </div>
+
+                <div class="metric-box">
+                    <div class="metric-item">
+                        <div class="metric-value">0 MB</div>
+                        <div class="metric-label">Texture Memory</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value">1.2ms</div>
+                        <div class="metric-label">GPU Cost</div>
+                    </div>
+                </div>
+                
+                <div class="code-snippet">
+                    // HLSL snippet: Camera Distance Falloff<br>
+                    float depth = LinearEyeDepth(IN.ScreenPosition);<br>
+                    float wear = saturate((_MaxDist - depth) / _MaxDist);<br>
+                    Out = lerp(BaseColor, _DamageColor, wear);
+                </div>
+            </div>
+        </div>
+
+        <!-- EXTRA: TA SPECIFIC EXPLANATION (The "Why") -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 3rem 0;">
+            <div style="background: #161622; border-radius: 20px; padding: 1.5rem;">
+                <h3 style="margin-bottom: 1rem;">🎯 Technical Art Focus</h3>
+                <ul style="list-style: none; color: var(--text-secondary);">
+                    <li style="margin-bottom: 0.8rem;">✓ <strong style="color:white;">Memory Budgeting:</strong> Implemented Unity's Texture Streaming API to stay under 2.5GB VRAM target.</li>
+                    <li style="margin-bottom: 0.8rem;">✓ <strong style="color:white;">Profiling:</strong> Deep experience with Unity Profiler (Deep Profile) and Frame Debugger.</li>
+                    <li style="margin-bottom: 0.8rem;">✓ <strong style="color:white;">Tool UX:</strong> Designed custom Editor Windows with UI Toolkit (USS) that artists actually want to use.</li>
+                </ul>
+            </div>
+            <div style="background: #161622; border-radius: 20px; padding: 1.5rem;">
+                <h3 style="margin-bottom: 1rem;">📄 Latest Dev Log</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1rem;">"How I reduced Unity build size by 18% using on-demand texture streaming and addressables."</p>
+                <a href="#" style="color: var(--accent-blue); text-decoration: none;">Read case study →</a>
+                <hr style="border-color: #2a2a3a; margin: 1rem 0;">
+                <p style="color: var(--text-secondary);">"Rebuilding the Unity Standard shader with camera-relative detail mapping."</p>
+                <a href="#" style="color: var(--accent-blue); text-decoration: none;">Read breakdown →</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 Your Name — Technical Artist (Unity Pipeline & Shaders)</p>
+            <p style="margin-top: 0.5rem;">📬 Contact for freelance or full-time roles: your.email@domain.com</p>
+        </div>
+    </div>
+</body>
+</html>
