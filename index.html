@@ -1,187 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farhan Fuhad | Technical Artist Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Farhan Fuhad | DevOps Engineer</title>
 
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- External CSS -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- HERO -->
-    <header class="hero">
-        <div class="container">
+<!-- HERO -->
+<header class="hero">
+    <div class="container">
+        <h1>Hi, I'm <span>Farhan Fuhad</span></h1>
+        <p>DevOps Engineer focused on CI/CD, cloud infrastructure & scalable systems.</p>
 
-            <div class="badge">⚡ OPEN TO WORK · UNITY TECHNICAL ARTIST</div>
-
-            <h1>
-                Pipeline & Shader<br>
-                Engineering for <span class="highlight">Unity</span>
-            </h1>
-
-            <p class="subhead">
-                I bridge the gap between art direction and runtime performance through tools, shaders, and automation.
-            </p>
-
-            <div class="tech-stack">
-                <span class="tech-tag">Unity URP / HDRP</span>
-                <span class="tech-tag">C# Editor Tools</span>
-                <span class="tech-tag">Shader Graph / HLSL</span>
-                <span class="tech-tag">Python Automation</span>
-                <span class="tech-tag">Addressables / Streaming</span>
-                <span class="tech-tag">Git / Perforce</span>
-            </div>
-
-            <div class="contact-links">
-                <a href="mailto:mfarhanfuhad@gmail.com">📧 Email</a>
-                <a href="https://github.com/" target="_blank">💻 GitHub</a>
-                <a href="https://linkedin.com/" target="_blank">🔗 LinkedIn</a>
-            </div>
-
+        <div class="buttons">
+            <a href="#projects" class="btn">View Projects</a>
+            <a href="https://github.com/" class="btn secondary">GitHub</a>
         </div>
-    </header>
+    </div>
+</header>
 
+<!-- ABOUT -->
+<section class="section">
+    <div class="container">
+        <h2>About Me</h2>
+        <p>
+            I build and automate deployment pipelines, containerized systems,
+            and cloud-based infrastructure using modern DevOps tools.
+        </p>
+    </div>
+</section>
 
-    <!-- PROJECTS -->
-    <main class="container">
+<!-- SKILLS -->
+<section class="section dark">
+    <div class="container">
+        <h2>DevOps Skills</h2>
 
-        <section class="section-title">
-            Featured Work <span></span>
-        </section>
-
-        <div class="project-grid">
-
-            <!-- PROJECT 1 -->
-            <div class="project-card">
-                <div class="project-icon">📐</div>
-                <h3>Texel Density Validator</h3>
-                <p class="project-sub">Unity Editor Tool</p>
-
-                <p>
-                    Real-time camera-based texel density visualization tool to prevent texture waste and improve streaming performance.
-                </p>
-
-                <div class="metric-box">
-                    <div class="metric-item">
-                        <div class="metric-value">-32%</div>
-                        <div class="metric-label">VRAM Usage</div>
-                    </div>
-                    <div class="metric-item">
-                        <div class="metric-value">0</div>
-                        <div class="metric-label">Pop-in Issues</div>
-                    </div>
-                </div>
-
-                <div class="code-snippet">
-StreamingController.SetLOD(camera);<br>
-texture.streamingMipmaps = true;
-                </div>
-            </div>
-
-
-            <!-- PROJECT 2 -->
-            <div class="project-card">
-                <div class="project-icon">⚙️</div>
-                <h3>Art Pipeline Automator</h3>
-                <p class="project-sub">C# + Python Tooling</p>
-
-                <p>
-                    Automated FBX → Prefab pipeline with LOD generation, material assignment, and naming validation.
-                </p>
-
-                <div class="metric-box">
-                    <div class="metric-item">
-                        <div class="metric-value">45m</div>
-                        <div class="metric-label">Time Saved</div>
-                    </div>
-                    <div class="metric-item">
-                        <div class="metric-value">100%</div>
-                        <div class="metric-label">Consistency</div>
-                    </div>
-                </div>
-
-                <div class="code-snippet">
-[MenuItem("Tools/Batch Import")]<br>
-static void ImportAssets() { ... }
-                </div>
-            </div>
-
-
-            <!-- PROJECT 3 -->
-            <div class="project-card">
-                <div class="project-icon">✨</div>
-                <h3>Procedural Damage Shader</h3>
-                <p class="project-sub">Shader Graph + HLSL</p>
-
-                <p>
-                    Camera-distance based procedural wear system with zero texture memory usage.
-                </p>
-
-                <div class="metric-box">
-                    <div class="metric-item">
-                        <div class="metric-value">0MB</div>
-                        <div class="metric-label">Texture Cost</div>
-                    </div>
-                    <div class="metric-item">
-                        <div class="metric-value">1.2ms</div>
-                        <div class="metric-label">GPU Cost</div>
-                    </div>
-                </div>
-
-                <div class="code-snippet">
-float wear = saturate(1 - depth / _MaxDist);
-return lerp(base, damage, wear);
-                </div>
-            </div>
-
+        <div class="grid">
+            <div class="card">CI/CD (GitHub Actions, Jenkins)</div>
+            <div class="card">Docker & Containers</div>
+            <div class="card">AWS / Cloud Basics</div>
+            <div class="card">Linux & Server Management</div>
+            <div class="card">Terraform (Infrastructure as Code)</div>
+            <div class="card">Monitoring (Prometheus / Grafana)</div>
         </div>
+    </div>
+</section>
 
+<!-- PROJECTS -->
+<section id="projects" class="section">
+    <div class="container">
+        <h2>Projects</h2>
 
-        <!-- DEV NOTES -->
-        <section class="dev-notes">
-
-            <div class="note-box">
-                <h3>Technical Focus</h3>
-                <ul>
-                    <li>Unity performance optimization (GPU/CPU profiling)</li>
-                    <li>Shader development (HLSL + Shader Graph)</li>
-                    <li>Tooling for art pipeline automation</li>
-                    <li>Memory optimization using Addressables</li>
-                </ul>
+        <div class="grid">
+            <div class="card project">
+                <h3>CI/CD Pipeline</h3>
+                <p>Automated build & deploy using GitHub Actions + Docker.</p>
             </div>
 
-            <div class="note-box">
-                <h3>Highlights</h3>
-                <p>
-                    Reduced texture memory usage by up to 32% using streaming mipmaps and camera-aware LOD systems.
-                </p>
-                <p>
-                    Built internal tools that reduced manual art pipeline work by 60–70%.
-                </p>
+            <div class="card project">
+                <h3>Docker Web App</h3>
+                <p>Containerized full-stack app deployed with Nginx.</p>
             </div>
 
-        </section>
+            <div class="card project">
+                <h3>Cloud Deployment</h3>
+                <p>Hosted scalable app on AWS EC2 with reverse proxy setup.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-    </main>
+<!-- CONTACT -->
+<section class="section dark">
+    <div class="container">
+        <h2>Contact</h2>
+        <p>Email: mfarhanfuhad@gmail.com</p>
+        <p>Location: Malaysia</p>
+    </div>
+</section>
 
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <p>© 2026 Farhan Fuhad — Technical Artist (Unity)</p>
-        <p>Contact: mfarhanfuhad@gmail.com</p>
-    </footer>
-
-
-    <!-- External JS -->
-    <script src="scripts.js"></script>
+<footer>
+    <p>© 2026 Farhan Fuhad. Built with GitHub Pages.</p>
+</footer>
 
 </body>
 </html>
