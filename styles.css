@@ -12,6 +12,7 @@ body {
     padding: 2rem;
 }
 
+/* HERO */
 .hero {
     padding: 4rem 0;
 }
@@ -25,6 +26,11 @@ h1 {
     color: #4a9eff;
 }
 
+.subhead {
+    color: #8a94a6;
+    margin-top: 1rem;
+}
+
 .badge {
     display: inline-block;
     padding: 6px 12px;
@@ -34,6 +40,7 @@ h1 {
     margin-bottom: 1rem;
 }
 
+/* TECH STACK */
 .tech-stack {
     display: flex;
     flex-wrap: wrap;
@@ -49,11 +56,27 @@ h1 {
     border-left: 3px solid #4a9eff;
 }
 
+/* LINKS */
+.contact-links a {
+    margin-right: 15px;
+    color: #8a94a6;
+    text-decoration: none;
+}
+
+.contact-links a:hover {
+    color: #4a9eff;
+}
+
+/* PROJECTS */
+.section-title {
+    font-size: 1.8rem;
+    margin: 2rem 0;
+}
+
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
-    margin-top: 2rem;
 }
 
 .project-card {
@@ -69,8 +92,44 @@ h1 {
     border-color: #4a9eff;
 }
 
+.project-sub {
+    color: #00d26a;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* METRICS */
+.metric-box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding: 10px;
+    border: 1px dashed #333;
+    border-radius: 10px;
+}
+
+.metric-value {
+    font-size: 1.2rem;
+    color: #00d26a;
+}
+
+/* DEV NOTES */
+.dev-notes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 3rem;
+}
+
+.note-box {
+    background: #161622;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+/* FOOTER */
 .footer {
-    margin-top: 4rem;
     text-align: center;
+    margin-top: 4rem;
     opacity: 0.6;
 }
