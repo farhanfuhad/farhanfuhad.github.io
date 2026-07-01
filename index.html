@@ -3,42 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farhan Fuhad | DevOps Portfolio</title>
-
-    <link rel="stylesheet" href="style.css">
+    <title>Farhan Fuhad | DevOps & Game Developer</title>
 
     <style>
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
             background: #0f172a;
             color: white;
-            text-align: center;
-            padding: 50px;
         }
 
-        .container {
-            max-width: 700px;
-            margin: auto;
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: #111827;
         }
 
         h1 {
-            font-size: 40px;
+            font-size: 42px;
+            margin-bottom: 10px;
         }
 
         p {
             color: #cbd5e1;
         }
 
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
         .btn {
             display: inline-block;
-            margin-top: 20px;
+            margin-top: 15px;
             padding: 12px 20px;
             background: #22c55e;
             color: white;
             text-decoration: none;
             border-radius: 8px;
             font-weight: bold;
-            transition: 0.3s;
         }
 
         .btn:hover {
@@ -46,35 +50,111 @@
         }
 
         .card {
-            margin-top: 30px;
-            padding: 20px;
             background: #1e293b;
+            padding: 20px;
+            margin-top: 20px;
             border-radius: 12px;
+        }
+
+        h2 {
+            border-left: 4px solid #22c55e;
+            padding-left: 10px;
+        }
+
+        .project {
+            margin-top: 15px;
+            padding: 15px;
+            background: #0b1220;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #94a3b8;
+            margin-top: 40px;
+        }
+
+        a {
+            color: #22c55e;
         }
     </style>
 </head>
 
 <body>
 
-<div class="container">
-
+<header>
     <h1>Farhan Fuhad</h1>
     <p>DevOps Engineer | Game Systems Developer | Unity Networking</p>
 
-    <!-- ✅ DOWNLOAD RESUME BUTTON -->
-    <a class="btn" href="resume.pdf" download target="_blank">
+    <!-- Resume Download -->
+    <a class="btn" href="resume.pdf" download>
         📄 Download Resume
     </a>
+</header>
 
+<div class="container">
+
+    <!-- ABOUT -->
     <div class="card">
         <h2>About Me</h2>
         <p>
-            DevOps-focused developer with experience in Unity, CI/CD pipelines,
-            game server systems, and multiplayer architecture (Netcode for GameObjects).
+            DevOps-focused developer with experience in Unity, multiplayer game systems,
+            CI/CD pipelines, and Netcode for GameObjects. Strong interest in scalable
+            backend systems and game architecture.
         </p>
     </div>
 
+    <!-- SKILLS -->
+    <div class="card">
+        <h2>Skills</h2>
+        <p>
+            Unity • C# • Netcode for GameObjects • GitHub Actions • CI/CD • Docker (basic)
+            • Game Architecture • Multiplayer Systems
+        </p>
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="card">
+        <h2>Projects</h2>
+
+        <div class="project">
+            <h3>🎮 5v5 MOBA Game (Unity Netcode)</h3>
+            <p>
+                Built multiplayer MOBA system with hero spawning, team assignment,
+                skill system, cooldowns, and basic attack mechanics similar to Mobile Legends.
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>⚙️ DevOps CI/CD Pipeline</h3>
+            <p>
+                Automated build pipeline using GitHub Actions to streamline Unity project
+                builds and reduce manual deployment errors.
+            </p>
+        </div>
+
+        <div class="project">
+            <h3>🧠 Skill System (MLBB Style)</h3>
+            <p>
+                Designed skill UI system with cooldown tracking, hero-specific abilities,
+                and responsive mobile controls.
+            </p>
+        </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="card">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:mfarhanfuhad@gmail.com">mfarhanfuhad@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/farhanfuhad" target="_blank">github.com/farhanfuhad</a></p>
+    </div>
+
 </div>
+
+<footer>
+    © 2026 Farhan Fuhad — DevOps & Game Developer Portfolio
+</footer>
 
 </body>
 </html>
