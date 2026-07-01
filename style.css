@@ -1,118 +1,274 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Inter',sans-serif;
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 
-body{
-background:#0b0f1a;
-color:#e2e8f0;
-line-height:1.6;
+body {
+    background: #0b0f1a;
+    color: #e2e8f0;
+    line-height: 1.6;
 }
 
-.container{
-width:90%;
-max-width:1100px;
-margin:auto;
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
 }
 
-.hero{
-padding:80px 0;
-text-align:center;
-background:radial-gradient(circle,#0f172a,#0b0f1a);
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    padding: 80px 0;
+    text-align: center;
+    background: radial-gradient(circle at top, #0f172a, #0b0f1a);
 }
 
-.badge{
-display:inline-block;
-padding:8px 14px;
-border:1px solid #38bdf8;
-border-radius:30px;
-color:#38bdf8;
-margin-bottom:20px;
+.badge {
+    display: inline-block;
+    padding: 6px 12px;
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    border-radius: 20px;
+    font-size: 12px;
+    margin-bottom: 20px;
+    color: #38bdf8;
 }
 
-.hero h1{
-font-size:44px;
+.hero h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 15px;
 }
 
-.subhead{
-max-width:700px;
-margin:auto;
-color:#94a3b8;
+.highlight {
+    color: #38bdf8;
 }
 
-.tech-stack{
-margin:20px 0;
+.subhead {
+    color: #94a3b8;
+    max-width: 700px;
+    margin: 0 auto 25px;
 }
 
-.tech-tag{
-display:inline-block;
-padding:8px 12px;
-margin:5px;
-border-radius:12px;
-background:#162033;
+.tech-stack {
+    margin: 20px 0;
 }
 
-.contact-links{
-margin-top:20px;
+.tech-tag {
+    display: inline-block;
+    margin: 5px;
+    padding: 6px 10px;
+    border-radius: 12px;
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    font-size: 12px;
 }
 
-.contact-links a{
-color:#38bdf8;
-margin:0 10px;
-text-decoration:none;
+.contact-links a {
+    margin: 0 10px;
+    color: #38bdf8;
+    text-decoration: none;
 }
 
-.btn{
-display:inline-block;
-padding:12px 20px;
-background:#38bdf8;
-color:#081018;
-border-radius:10px;
-text-decoration:none;
-font-weight:700;
+.contact-links a:hover {
+    text-decoration: underline;
 }
 
-.section-title{
-font-size:28px;
-margin:60px 0 20px;
-color:#38bdf8;
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 60px 0 20px;
+    color: #38bdf8;
 }
 
-.grid{
-display:grid;
-grid-template-columns:
-repeat(auto-fit,minmax(300px,1fr));
+/* =========================
+   PROJECT GRID
+========================= */
 
-gap:20px;
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
 }
 
-.card{
-background:#111827;
-padding:22px;
-border-radius:14px;
+.project-card {
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(56, 189, 248, 0.15);
+    padding: 20px;
+    border-radius: 14px;
+    transition: 0.3s;
 }
 
-.video{
-margin-top:15px;
-position:relative;
-padding-top:56.25%;
-overflow:hidden;
-border-radius:10px;
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: #38bdf8;
 }
 
-.video iframe{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-border:none;
+.project-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
 }
 
-footer{
-padding:40px;
-text-align:center;
-color:#64748b;
+.project-sub {
+    font-size: 13px;
+    color: #a78bfa;
+}
+
+/* =========================
+   WORK SECTION
+========================= */
+
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.work-card {
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(56, 189, 248, 0.15);
+    padding: 20px;
+    border-radius: 14px;
+    transition: 0.3s;
+}
+
+.work-card:hover {
+    transform: translateY(-6px);
+    border-color: #38bdf8;
+}
+
+.role {
+    color: #a78bfa;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+/* =========================
+   VIDEO CARD (CINEMATIC)
+========================= */
+
+.video-card {
+    margin-top: 15px;
+    background: rgba(2, 6, 23, 0.7);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    border-radius: 14px;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.video-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.2);
+}
+
+.video-title {
+    font-size: 13px;
+    color: #38bdf8;
+    margin-bottom: 8px;
+}
+
+.video-frame {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.video-frame iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* =========================
+   CINEMATIC DESCRIPTION
+========================= */
+
+.cinematic-description {
+    margin-top: 30px;
+    padding: 22px;
+    border-radius: 14px;
+    background: rgba(2, 6, 23, 0.7);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    color: #cbd5e1;
+    line-height: 1.7;
+}
+
+.cinematic-description h3 {
+    color: #38bdf8;
+    margin-bottom: 12px;
+}
+
+.cinematic-description p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* =========================
+   PIPELINE SECTION
+========================= */
+
+.pipeline-section {
+    margin-top: 60px;
+}
+
+.pipeline-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.pipeline-card {
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(56, 189, 248, 0.15);
+    padding: 18px;
+    border-radius: 14px;
+}
+
+.pipeline-card h3 {
+    color: #38bdf8;
+    margin-bottom: 8px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    text-align: center;
+    padding: 40px;
+    margin-top: 60px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .container {
+        width: 95%;
+    }
 }
