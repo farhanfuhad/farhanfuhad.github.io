@@ -5,155 +5,134 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farhan Fuhad | DevOps & Game Developer</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #0f172a;
-            color: white;
-        }
+    <!-- Google Font (FIXED) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-        header {
-            text-align: center;
-            padding: 60px 20px;
-            background: #111827;
-        }
-
-        h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
-        }
-
-        p {
-            color: #cbd5e1;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-        }
-
-        .btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 12px 20px;
-            background: #22c55e;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-        }
-
-        .btn:hover {
-            background: #16a34a;
-        }
-
-        .card {
-            background: #1e293b;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 12px;
-        }
-
-        h2 {
-            border-left: 4px solid #22c55e;
-            padding-left: 10px;
-        }
-
-        .project {
-            margin-top: 15px;
-            padding: 15px;
-            background: #0b1220;
-            border-radius: 10px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            color: #94a3b8;
-            margin-top: 40px;
-        }
-
-        a {
-            color: #22c55e;
-        }
-    </style>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-    <h1>Farhan Fuhad</h1>
-    <p>DevOps Engineer | Game Systems Developer | Unity Networking</p>
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
 
-    <!-- Resume Download -->
-    <a class="btn" href="resume.pdf" download>
-        📄 Download Resume
-    </a>
-</header>
+        <div class="badge">DevOps • Unity • Multiplayer Systems</div>
 
-<div class="container">
+        <h1>Farhan Fuhad</h1>
 
-    <!-- ABOUT -->
-    <div class="card">
-        <h2>About Me</h2>
-        <p>
-            DevOps-focused developer with experience in Unity, multiplayer game systems,
-            CI/CD pipelines, and Netcode for GameObjects. Strong interest in scalable
-            backend systems and game architecture.
+        <p class="subhead">
+            DevOps Engineer & Game Systems Developer specializing in Unity Netcode,
+            CI/CD pipelines, and scalable multiplayer architecture.
         </p>
-    </div>
 
-    <!-- SKILLS -->
-    <div class="card">
-        <h2>Skills</h2>
-        <p>
-            Unity • C# • Netcode for GameObjects • GitHub Actions • CI/CD • Docker (basic)
-            • Game Architecture • Multiplayer Systems
-        </p>
-    </div>
-
-    <!-- PROJECTS -->
-    <div class="card">
-        <h2>Projects</h2>
-
-        <div class="project">
-            <h3>🎮 5v5 MOBA Game (Unity Netcode)</h3>
-            <p>
-                Built multiplayer MOBA system with hero spawning, team assignment,
-                skill system, cooldowns, and basic attack mechanics similar to Mobile Legends.
-            </p>
+        <div class="tech-stack">
+            <span class="tech-tag">Unity</span>
+            <span class="tech-tag">C#</span>
+            <span class="tech-tag">Netcode for GameObjects</span>
+            <span class="tech-tag">GitHub Actions</span>
+            <span class="tech-tag">Docker (basic)</span>
         </div>
 
-        <div class="project">
-            <h3>⚙️ DevOps CI/CD Pipeline</h3>
-            <p>
-                Automated build pipeline using GitHub Actions to streamline Unity project
-                builds and reduce manual deployment errors.
-            </p>
+        <div class="contact-links">
+            <a href="mailto:mfarhanfuhad@gmail.com">Email</a>
+            <a href="https://github.com/farhanfuhad" target="_blank">GitHub</a>
         </div>
 
-        <div class="project">
-            <h3>🧠 Skill System (MLBB Style)</h3>
-            <p>
-                Designed skill UI system with cooldown tracking, hero-specific abilities,
-                and responsive mobile controls.
-            </p>
+        <br><br>
+
+        <!-- Resume Button FIXED -->
+        <a class="btn" href="./resume.pdf" download="Farhan_Fuhad_Resume.pdf">
+            📄 Download Resume
+        </a>
+
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section>
+    <div class="container">
+
+        <h2 class="section-title">Projects</h2>
+
+        <div class="project-grid">
+
+            <div class="project-card">
+                <div class="project-icon">🎮</div>
+                <h3>5v5 MOBA Game</h3>
+                <p class="project-sub">Unity Netcode Multiplayer</p>
+                <p>
+                    Built hero spawning, team system, skill cooldowns,
+                    and basic attack system similar to Mobile Legends.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">⚙️</div>
+                <h3>CI/CD Pipeline</h3>
+                <p class="project-sub">GitHub Actions</p>
+                <p>
+                    Automated Unity build pipeline to reduce manual deployment errors
+                    and improve release speed.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <div class="project-icon">🧠</div>
+                <h3>Skill System</h3>
+                <p class="project-sub">MLBB-style System</p>
+                <p>
+                    Cooldown-based skill UI, hero abilities, and mobile-friendly controls.
+                </p>
+            </div>
+
         </div>
+
     </div>
+</section>
 
-    <!-- CONTACT -->
-    <div class="card">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:mfarhanfuhad@gmail.com">mfarhanfuhad@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/farhanfuhad" target="_blank">github.com/farhanfuhad</a></p>
+<!-- WORK / DEVOPS -->
+<section class="pipeline-section">
+    <div class="container">
+
+        <h2 class="section-title">DevOps & Systems Work</h2>
+
+        <div class="work-grid">
+
+            <div class="work-card">
+                <h3>Game Networking</h3>
+                <p class="role">Unity Netcode for GameObjects</p>
+                <p>
+                    Built multiplayer architecture for 5v5 matches including spawn,
+                    sync, and match state control.
+                </p>
+            </div>
+
+            <div class="work-card">
+                <h3>CI/CD Automation</h3>
+                <p class="role">GitHub Actions</p>
+                <p>
+                    Automated build pipelines for Unity projects to ensure stable releases.
+                </p>
+            </div>
+
+            <div class="work-card">
+                <h3>System Optimization</h3>
+                <p class="role">Mobile Performance</p>
+                <p>
+                    Optimized Unity game for low-end Android devices (Samsung A02s level).
+                </p>
+            </div>
+
+        </div>
+
     </div>
+</section>
 
-</div>
-
-<footer>
-    © 2026 Farhan Fuhad — DevOps & Game Developer Portfolio
+<!-- FOOTER -->
+<footer class="footer">
+    © 2026 Farhan Fuhad — DevOps & Game Developer
 </footer>
 
 </body>
