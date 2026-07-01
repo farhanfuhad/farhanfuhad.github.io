@@ -10,7 +10,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -20,21 +19,21 @@
 <header class="hero">
     <div class="container">
 
-        <div class="badge">⚡ OPEN TO WORK · TECHNICAL ARTIST / DEVOPS (UNITY)</div>
+        <div class="badge">⚡ OPEN TO WORK · TECH ARTIST / DEVOPS (UNITY)</div>
 
         <h1>
-            Pipeline, Shaders &<br>
-            Game Systems for <span class="highlight">Unity</span>
+            Pipeline, Tools &<br>
+            UI Systems for <span class="highlight">Unity</span>
         </h1>
 
         <p class="subhead">
-            Technical Artist focused on performance, automation, and scalable Unity production pipelines.
+            Technical Artist focused on performance optimization, automation, and scalable Unity production pipelines.
         </p>
 
         <div class="tech-stack">
             <span class="tech-tag">Unity URP / HDRP</span>
             <span class="tech-tag">C# Tools</span>
-            <span class="tech-tag">Shader Graph / HLSL</span>
+            <span class="tech-tag">UI Optimization</span>
             <span class="tech-tag">TeamCity CI/CD</span>
             <span class="tech-tag">Plastic SCM</span>
             <span class="tech-tag">Unity Cloud Build</span>
@@ -60,7 +59,7 @@
         <div class="project-icon">📐</div>
         <h3>Texel Density Validator</h3>
         <p class="project-sub">Unity Editor Tool</p>
-        <p>Camera-based texel density visualization tool for optimizing texture usage.</p>
+        <p>Real-time camera-based texel density visualization to optimize texture usage and streaming.</p>
 
         <div class="metric-box">
             <div class="metric-item">
@@ -74,7 +73,7 @@
         </div>
 
         <div class="code-snippet">
-texture.streamingMipmaps = true;
+texture.streamingMipmaps = true;<br>
 LODGroup.SetLODs();
         </div>
     </div>
@@ -82,8 +81,8 @@ LODGroup.SetLODs();
     <div class="project-card">
         <div class="project-icon">⚙️</div>
         <h3>Art Pipeline Automator</h3>
-        <p class="project-sub">C# + Python</p>
-        <p>Automated FBX → Prefab pipeline with validation and LOD generation.</p>
+        <p class="project-sub">C# + Python Tooling</p>
+        <p>Automated FBX → Prefab pipeline with LOD generation and validation system.</p>
 
         <div class="metric-box">
             <div class="metric-item">
@@ -97,37 +96,42 @@ LODGroup.SetLODs();
         </div>
 
         <div class="code-snippet">
-[MenuItem("Tools/Import Pipeline")]
+[MenuItem("Tools/Import Pipeline")]<br>
 static void RunPipeline() {}
         </div>
     </div>
 
+    <!-- UPDATED PROJECT -->
     <div class="project-card">
-        <div class="project-icon">✨</div>
-        <h3>Procedural Damage Shader</h3>
-        <p class="project-sub">Shader Graph + HLSL</p>
-        <p>Dynamic wear system using camera distance & procedural blending.</p>
+        <div class="project-icon">🧩</div>
+        <h3>Dynamic UI Atlas System</h3>
+        <p class="project-sub">Unity UI Optimization Tool</p>
+
+        <p>
+            Runtime UI atlas generator that reduces draw calls by dynamically packing sprites
+            and optimizing UI batching for mobile performance.
+        </p>
 
         <div class="metric-box">
             <div class="metric-item">
-                <div class="metric-value">0MB</div>
-                <div class="metric-label">Texture Cost</div>
+                <div class="metric-value">-45%</div>
+                <div class="metric-label">Draw Calls</div>
             </div>
             <div class="metric-item">
-                <div class="metric-value">1.2ms</div>
-                <div class="metric-label">GPU Cost</div>
+                <div class="metric-value">-28%</div>
+                <div class="metric-label">Memory Usage</div>
             </div>
         </div>
 
         <div class="code-snippet">
-float wear = saturate(1 - depth/_MaxDist);
-return lerp(base, damage, wear);
+UIAtlas.PackAtRuntime(sprites);<br>
+Canvas.ForceUpdateCanvases();
         </div>
     </div>
 
 </div>
 
-<!-- DEVOPS PIPELINE -->
+<!-- PIPELINE SECTION -->
 <section class="pipeline-section">
 
     <div class="section-title">Pipeline & DevOps Systems</div>
@@ -138,29 +142,29 @@ return lerp(base, damage, wear);
             <h3>TeamCity CI/CD</h3>
             <p>Automated Unity builds triggered on commit for validation and deployment.</p>
             <ul>
-                <li>Automated builds per branch</li>
-                <li>Nightly build system</li>
+                <li>Branch-based builds</li>
+                <li>Nightly automation</li>
                 <li>APK / PC export pipelines</li>
             </ul>
         </div>
 
         <div class="pipeline-card">
             <h3>Unity Cloud Build</h3>
-            <p>Cloud-based build monitoring and remote compilation workflow.</p>
+            <p>Cloud-based build monitoring and automated testing pipeline integration.</p>
             <ul>
                 <li>Remote build tracking</li>
-                <li>Automated testing</li>
-                <li>Team dashboard integration</li>
+                <li>Automated build status</li>
+                <li>Team visibility dashboard</li>
             </ul>
         </div>
 
         <div class="pipeline-card">
             <h3>Plastic SCM Workflow</h3>
-            <p>Branch-based version control optimized for Unity large assets.</p>
+            <p>Branch-based version control optimized for large Unity projects.</p>
             <ul>
-                <li>Branch management system</li>
-                <li>Conflict resolution workflow</li>
-                <li>Large file handling optimization</li>
+                <li>Asset conflict management</li>
+                <li>Branch-based workflow</li>
+                <li>Large file optimization</li>
             </ul>
         </div>
 
@@ -175,23 +179,22 @@ return lerp(base, damage, wear);
         <h3>Technical Focus</h3>
         <ul>
             <li>Unity performance optimization</li>
-            <li>Shader development (HLSL / Shader Graph)</li>
-            <li>Tool automation for art pipeline</li>
-            <li>CI/CD for game production</li>
+            <li>UI batching & rendering optimization</li>
+            <li>Tool automation for production pipelines</li>
+            <li>CI/CD for game development workflows</li>
         </ul>
     </div>
 
     <div class="note-box">
         <h3>Impact</h3>
-        <p>Reduced texture memory usage by 32% using streaming and LOD systems.</p>
-        <p>Cut manual pipeline work by 60–70% through automation tools.</p>
+        <p>Reduced UI draw calls by up to 45% using dynamic atlas batching.</p>
+        <p>Improved pipeline efficiency by automating repetitive asset workflows.</p>
     </div>
 
 </section>
 
 </main>
 
-<!-- FOOTER -->
 <footer class="footer">
     © 2026 Farhan Fuhad — Technical Artist / DevOps (Unity)
 </footer>
