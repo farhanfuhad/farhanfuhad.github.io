@@ -38,17 +38,18 @@
             <span class="tech-tag">AWS Multiplayer</span>
         </div>
 
-        <!-- CONTACT SECTION UPDATED -->
+        <!-- CONTACT -->
         <div class="contact-links">
-            <a href="mailto:mfarhanfuhad@gmail.com?subject=Portfolio%20Contact">
-                📧 mfarhanfuhad@gmail.com
-            </a>
+
+            <!-- CLICK TO COPY EMAIL -->
+            <a href="#" onclick="copyEmail(event)">📧 Copy Email</a>
 
             <a href="https://github.com/" target="_blank">💻 GitHub</a>
 
             <a href="https://www.linkedin.com/in/farhanfuhad/" target="_blank">
                 🔗 LinkedIn
             </a>
+
         </div>
 
     </div>
@@ -192,6 +193,24 @@
 <footer class="footer">
     © 2026 Farhan Fuhad — Technical Artist / Real-Time Systems / Cinematic Production
 </footer>
+
+<!-- EMAIL COPY SCRIPT -->
+<script>
+function copyEmail(event) {
+    event.preventDefault();
+
+    const email = "mfarhanfuhad@gmail.com";
+    navigator.clipboard.writeText(email);
+
+    const btn = event.target;
+    const original = btn.innerText;
+
+    btn.innerText = "✔ Copied!";
+    setTimeout(() => {
+        btn.innerText = "📧 Copy Email";
+    }, 1500);
+}
+</script>
 
 </body>
 </html>
