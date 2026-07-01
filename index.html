@@ -1,139 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Farhan Fuhad | DevOps & Game Developer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farhan Fuhad | Technical Artist Portfolio</title>
 
-  <link rel="stylesheet" href="style.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <header class="hero">
-    <div class="container">
-      <h1>Farhan Fuhad</h1>
-      <p>DevOps Engineer | Unity Game Developer | Technical Artist</p>
+    <!-- HERO -->
+    <header class="hero">
+        <div class="container">
 
-      <div class="buttons">
-        <a href="#projects" class="btn">View Projects</a>
-        <a href="#contact" class="btn secondary">Contact Me</a>
-      </div>
-    </div>
-  </header>
+            <div class="badge">⚡ OPEN TO WORK · UNITY TECHNICAL ARTIST</div>
 
-  <!-- ABOUT -->
-  <section class="section">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>
-        I am a DevOps-focused developer with experience in Unity game development,
-        mobile optimization, and game system architecture. I enjoy building scalable
-        systems, optimizing performance for low-end devices, and automating workflows.
-      </p>
-    </div>
-  </section>
+            <h1>
+                Pipeline & Shader<br>
+                Engineering for <span class="highlight">Unity</span>
+            </h1>
 
-  <!-- SKILLS -->
-  <section class="section dark">
-    <div class="container">
-      <h2>Skills</h2>
+            <p class="subhead">
+                I bridge the gap between art direction and runtime performance through tools, shaders, and automation.
+            </p>
 
-      <div class="grid">
-        <div class="card">
-          <h3>DevOps</h3>
-          <ul>
-            <li>CI/CD Pipeline</li>
-            <li>GitHub Actions</li>
-            <li>Linux Server Basics</li>
-            <li>Docker Basics</li>
-          </ul>
+            <div class="tech-stack">
+                <span class="tech-tag">Unity URP / HDRP</span>
+                <span class="tech-tag">C# Editor Tools</span>
+                <span class="tech-tag">Shader Graph / HLSL</span>
+                <span class="tech-tag">Python Automation</span>
+                <span class="tech-tag">Addressables / Streaming</span>
+                <span class="tech-tag">Git / Perforce</span>
+            </div>
+
+            <div class="contact-links">
+                <a href="mailto:mfarhanfuhad@gmail.com">📧 Email</a>
+                <a href="https://github.com/" target="_blank">💻 GitHub</a>
+                <a href="https://linkedin.com/" target="_blank">🔗 LinkedIn</a>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- PROJECTS -->
+    <main class="container">
+
+        <section class="section-title">
+            Featured Work <span></span>
+        </section>
+
+        <div class="project-grid">
+
+            <!-- PROJECT 1 -->
+            <div class="project-card">
+                <div class="project-icon">📐</div>
+                <h3>Texel Density Validator</h3>
+                <p class="project-sub">Unity Editor Tool</p>
+
+                <p>
+                    Real-time camera-based texel density visualization tool to prevent texture waste and improve streaming performance.
+                </p>
+
+                <div class="metric-box">
+                    <div class="metric-item">
+                        <div class="metric-value">-32%</div>
+                        <div class="metric-label">VRAM Usage</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value">0</div>
+                        <div class="metric-label">Pop-in Issues</div>
+                    </div>
+                </div>
+
+                <div class="code-snippet">
+StreamingController.SetLOD(camera);<br>
+texture.streamingMipmaps = true;
+                </div>
+            </div>
+
+
+            <!-- PROJECT 2 -->
+            <div class="project-card">
+                <div class="project-icon">⚙️</div>
+                <h3>Art Pipeline Automator</h3>
+                <p class="project-sub">C# + Python Tooling</p>
+
+                <p>
+                    Automated FBX → Prefab pipeline with LOD generation, material assignment, and naming validation.
+                </p>
+
+                <div class="metric-box">
+                    <div class="metric-item">
+                        <div class="metric-value">45m</div>
+                        <div class="metric-label">Time Saved</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value">100%</div>
+                        <div class="metric-label">Consistency</div>
+                    </div>
+                </div>
+
+                <div class="code-snippet">
+[MenuItem("Tools/Batch Import")]<br>
+static void ImportAssets() { ... }
+                </div>
+            </div>
+
+
+            <!-- PROJECT 3 -->
+            <div class="project-card">
+                <div class="project-icon">✨</div>
+                <h3>Procedural Damage Shader</h3>
+                <p class="project-sub">Shader Graph + HLSL</p>
+
+                <p>
+                    Camera-distance based procedural wear system with zero texture memory usage.
+                </p>
+
+                <div class="metric-box">
+                    <div class="metric-item">
+                        <div class="metric-value">0MB</div>
+                        <div class="metric-label">Texture Cost</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-value">1.2ms</div>
+                        <div class="metric-label">GPU Cost</div>
+                    </div>
+                </div>
+
+                <div class="code-snippet">
+float wear = saturate(1 - depth / _MaxDist);
+return lerp(base, damage, wear);
+                </div>
+            </div>
+
         </div>
 
-        <div class="card">
-          <h3>Game Development</h3>
-          <ul>
-            <li>Unity Engine</li>
-            <li>Netcode (Multiplayer)</li>
-            <li>NavMesh AI</li>
-            <li>Mobile Optimization</li>
-          </ul>
-        </div>
 
-        <div class="card">
-          <h3>Programming</h3>
-          <ul>
-            <li>C# (Unity)</li>
-            <li>Python Basics</li>
-            <li>JavaScript</li>
-            <li>HTML & CSS</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+        <!-- DEV NOTES -->
+        <section class="dev-notes">
 
-  <!-- PROJECTS -->
-  <section id="projects" class="section">
-    <div class="container">
-      <h2>Projects</h2>
+            <div class="note-box">
+                <h3>Technical Focus</h3>
+                <ul>
+                    <li>Unity performance optimization (GPU/CPU profiling)</li>
+                    <li>Shader development (HLSL + Shader Graph)</li>
+                    <li>Tooling for art pipeline automation</li>
+                    <li>Memory optimization using Addressables</li>
+                </ul>
+            </div>
 
-      <div class="grid">
+            <div class="note-box">
+                <h3>Highlights</h3>
+                <p>
+                    Reduced texture memory usage by up to 32% using streaming mipmaps and camera-aware LOD systems.
+                </p>
+                <p>
+                    Built internal tools that reduced manual art pipeline work by 60–70%.
+                </p>
+            </div>
 
-        <div class="card">
-          <h3>5v5 MOBA System (Unity)</h3>
-          <p>
-            Built a Mobile Legends-style multiplayer system using Unity Netcode,
-            including hero spawning, skills, cooldowns, and match system.
-          </p>
-        </div>
+        </section>
 
-        <div class="card">
-          <h3>Game Optimization System</h3>
-          <p>
-            Optimized Unity game performance for low-end Android devices (Samsung A02s),
-            including memory reduction and asset streaming.
-          </p>
-        </div>
+    </main>
 
-        <div class="card">
-          <h3>CI/CD Learning Pipeline</h3>
-          <p>
-            Built basic CI/CD workflows using GitHub Actions for automated build testing.
-          </p>
-        </div>
 
-      </div>
-    </div>
-  </section>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2026 Farhan Fuhad — Technical Artist (Unity)</p>
+        <p>Contact: mfarhanfuhad@gmail.com</p>
+    </footer>
 
-  <!-- DEVOPS GAME DEV SECTION -->
-  <section class="section dark">
-    <div class="container">
-      <h2>DevOps in Game Development</h2>
-      <p>
-        I integrate DevOps practices into Unity game development to improve build automation,
-        version control workflow, and deployment efficiency. This includes automated builds,
-        testing pipelines, and performance monitoring for mobile games.
-      </p>
-    </div>
-  </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2>Contact</h2>
-      <p>Email: yourname@email.com</p>
-      <p>GitHub: github.com/yourprofile</p>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 Farhan Fuhad. Built with HTML & CSS.</p>
-  </footer>
+    <!-- External JS -->
+    <script src="scripts.js"></script>
 
 </body>
 </html>
