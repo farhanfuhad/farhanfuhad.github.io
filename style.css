@@ -15,7 +15,6 @@ body {
     line-height: 1.6;
 }
 
-/* Container */
 .container {
     width: 90%;
     max-width: 1100px;
@@ -27,26 +26,32 @@ body {
 ========================= */
 
 .hero {
-    padding: 80px 0;
+    padding: 90px 0;
     text-align: center;
-    background: radial-gradient(circle at top, #0f172a, #0b0f1a);
+    background:
+        radial-gradient(circle at top, rgba(56, 189, 248, 0.14), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(99, 102, 241, 0.12), transparent 30%),
+        #0b0f1a;
 }
 
 .badge {
     display: inline-block;
-    padding: 6px 12px;
+    padding: 7px 14px;
     background: rgba(56, 189, 248, 0.1);
     border: 1px solid rgba(56, 189, 248, 0.3);
     border-radius: 20px;
     font-size: 12px;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
     color: #38bdf8;
+    font-weight: 700;
+    letter-spacing: 0.4px;
 }
 
 .hero h1 {
-    font-size: 42px;
-    font-weight: 700;
-    margin-bottom: 15px;
+    font-size: 46px;
+    font-weight: 800;
+    margin-bottom: 18px;
+    line-height: 1.15;
 }
 
 .highlight {
@@ -55,32 +60,47 @@ body {
 
 .subhead {
     color: #94a3b8;
-    max-width: 700px;
-    margin: 0 auto 25px;
+    max-width: 780px;
+    margin: 0 auto 28px;
+    font-size: 16px;
 }
 
 .tech-stack {
-    margin: 20px 0;
+    margin: 24px auto;
+    max-width: 850px;
 }
 
 .tech-tag {
     display: inline-block;
     margin: 5px;
-    padding: 6px 10px;
+    padding: 7px 11px;
     border-radius: 12px;
     background: rgba(99, 102, 241, 0.1);
-    border: 1px solid rgba(99, 102, 241, 0.2);
+    border: 1px solid rgba(99, 102, 241, 0.25);
     font-size: 12px;
+    color: #c7d2fe;
+}
+
+.contact-links {
+    margin-top: 26px;
 }
 
 .contact-links a {
-    margin: 0 10px;
+    display: inline-block;
+    margin: 6px 8px;
+    padding: 10px 14px;
     color: #38bdf8;
     text-decoration: none;
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.65);
+    transition: 0.3s;
 }
 
 .contact-links a:hover {
-    text-decoration: underline;
+    background: rgba(56, 189, 248, 0.12);
+    border-color: #38bdf8;
+    transform: translateY(-2px);
 }
 
 /* =========================
@@ -89,8 +109,8 @@ body {
 
 .section-title {
     font-size: 24px;
-    font-weight: 600;
-    margin: 60px 0 20px;
+    font-weight: 700;
+    margin: 65px 0 22px;
     color: #38bdf8;
 }
 
@@ -100,48 +120,132 @@ body {
 
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 20px;
 }
 
 .project-card {
-    background: rgba(15, 23, 42, 0.7);
+    background: rgba(15, 23, 42, 0.74);
     border: 1px solid rgba(56, 189, 248, 0.15);
-    padding: 20px;
-    border-radius: 14px;
+    padding: 22px;
+    border-radius: 16px;
     transition: 0.3s;
+    min-height: 230px;
 }
 
 .project-card:hover {
     transform: translateY(-6px);
     border-color: #38bdf8;
+    box-shadow: 0 18px 40px rgba(2, 6, 23, 0.35);
 }
 
 .project-icon {
-    font-size: 28px;
-    margin-bottom: 10px;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.project-card h3 {
+    margin-bottom: 8px;
 }
 
 .project-sub {
     font-size: 13px;
     color: #a78bfa;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.project-card p {
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+/* =========================
+   PIPELINE SECTION
+========================= */
+
+.pipeline-section {
+    margin-top: 65px;
+}
+
+.pipeline-flow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0 34px;
+    padding: 24px;
+    background: rgba(2, 6, 23, 0.55);
+    border: 1px solid rgba(56, 189, 248, 0.16);
+    border-radius: 18px;
+}
+
+.flow-step {
+    background: rgba(56, 189, 248, 0.12);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    color: #e0f2fe;
+    padding: 12px 18px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.flow-arrow {
+    color: #38bdf8;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.pipeline-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.pipeline-card {
+    background: rgba(15, 23, 42, 0.74);
+    border: 1px solid rgba(56, 189, 248, 0.15);
+    padding: 20px;
+    border-radius: 16px;
+    transition: 0.3s;
+}
+
+.pipeline-card:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+}
+
+.pipeline-card h3 {
+    color: #38bdf8;
+    margin-bottom: 9px;
+    font-size: 17px;
+}
+
+.pipeline-card p {
+    color: #cbd5e1;
+    font-size: 14px;
 }
 
 /* =========================
    WORK SECTION
 ========================= */
 
+.work-section {
+    margin-top: 65px;
+}
+
 .work-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
     gap: 20px;
 }
 
 .work-card {
-    background: rgba(15, 23, 42, 0.7);
+    background: rgba(15, 23, 42, 0.74);
     border: 1px solid rgba(56, 189, 248, 0.15);
-    padding: 20px;
-    border-radius: 14px;
+    padding: 22px;
+    border-radius: 16px;
     transition: 0.3s;
 }
 
@@ -150,14 +254,24 @@ body {
     border-color: #38bdf8;
 }
 
+.work-card h3 {
+    margin-bottom: 8px;
+}
+
+.work-card p {
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
 .role {
-    color: #a78bfa;
+    color: #a78bfa !important;
     font-size: 13px;
     margin-bottom: 10px;
+    font-weight: 600;
 }
 
 /* =========================
-   VIDEO CARD (CINEMATIC)
+   VIDEO CARD
 ========================= */
 
 .video-card {
@@ -178,6 +292,7 @@ body {
     font-size: 13px;
     color: #38bdf8;
     margin-bottom: 8px;
+    font-weight: 600;
 }
 
 .video-frame {
@@ -198,65 +313,16 @@ body {
 }
 
 /* =========================
-   CINEMATIC DESCRIPTION
-========================= */
-
-.cinematic-description {
-    margin-top: 30px;
-    padding: 22px;
-    border-radius: 14px;
-    background: rgba(2, 6, 23, 0.7);
-    border: 1px solid rgba(56, 189, 248, 0.2);
-    color: #cbd5e1;
-    line-height: 1.7;
-}
-
-.cinematic-description h3 {
-    color: #38bdf8;
-    margin-bottom: 12px;
-}
-
-.cinematic-description p {
-    margin-bottom: 10px;
-    font-size: 14px;
-}
-
-/* =========================
-   PIPELINE SECTION
-========================= */
-
-.pipeline-section {
-    margin-top: 60px;
-}
-
-.pipeline-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-}
-
-.pipeline-card {
-    background: rgba(15, 23, 42, 0.7);
-    border: 1px solid rgba(56, 189, 248, 0.15);
-    padding: 18px;
-    border-radius: 14px;
-}
-
-.pipeline-card h3 {
-    color: #38bdf8;
-    margin-bottom: 8px;
-}
-
-/* =========================
    FOOTER
 ========================= */
 
 .footer {
     text-align: center;
-    padding: 40px;
-    margin-top: 60px;
+    padding: 42px 20px;
+    margin-top: 70px;
     color: #64748b;
     font-size: 13px;
+    border-top: 1px solid rgba(56, 189, 248, 0.1);
 }
 
 /* =========================
@@ -264,11 +330,29 @@ body {
 ========================= */
 
 @media (max-width: 768px) {
+    .hero {
+        padding: 65px 0;
+    }
+
     .hero h1 {
-        font-size: 28px;
+        font-size: 30px;
     }
 
     .container {
-        width: 95%;
+        width: 94%;
+    }
+
+    .contact-links a {
+        display: block;
+        max-width: 260px;
+        margin: 10px auto;
+    }
+
+    .flow-arrow {
+        transform: rotate(90deg);
+    }
+
+    .pipeline-flow {
+        flex-direction: column;
     }
 }
