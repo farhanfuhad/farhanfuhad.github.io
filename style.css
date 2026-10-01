@@ -29,13 +29,18 @@ body {
    HERO
 ========================= */
 
-.hero {
+.hero,
+.project-hero {
     padding: 90px 0;
     text-align: center;
     background:
         radial-gradient(circle at top, rgba(56, 189, 248, 0.14), transparent 35%),
         radial-gradient(circle at bottom right, rgba(99, 102, 241, 0.12), transparent 30%),
         #0b0f1a;
+}
+
+.project-hero {
+    padding: 70px 0 65px;
 }
 
 .badge {
@@ -51,11 +56,16 @@ body {
     letter-spacing: 0.4px;
 }
 
-.hero h1 {
+.hero h1,
+.project-hero h1 {
     font-size: 46px;
     font-weight: 800;
     margin-bottom: 18px;
     line-height: 1.15;
+}
+
+.project-hero h1 {
+    font-size: 48px;
 }
 
 .subhead {
@@ -103,6 +113,18 @@ body {
     transform: translateY(-2px);
 }
 
+.back-link {
+    display: inline-block;
+    margin-bottom: 25px;
+    color: #38bdf8;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
 /* =========================
    SECTION TITLES
 ========================= */
@@ -129,7 +151,8 @@ body {
 .work-card,
 .experience-card,
 .about-card,
-.performance-card {
+.performance-card,
+.detail-card {
     background: rgba(15, 23, 42, 0.74);
     border: 1px solid rgba(56, 189, 248, 0.15);
     border-radius: 16px;
@@ -171,9 +194,35 @@ body {
 .pipeline-card p,
 .work-card p,
 .experience-card p,
-.about-card p {
+.about-card p,
+.detail-card p {
     color: #cbd5e1;
     font-size: 14px;
+}
+
+/* =========================
+   DETAIL BUTTON
+========================= */
+
+.detail-button {
+    display: inline-block;
+    margin: 18px 0 5px;
+    padding: 10px 16px;
+    color: #0b0f1a;
+    background: #38bdf8;
+    border: 1px solid #38bdf8;
+    border-radius: 9px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.25s;
+}
+
+.detail-button:hover {
+    transform: translateY(-2px);
+    background: #7dd3fc;
+    border-color: #7dd3fc;
+    box-shadow: 0 8px 22px rgba(56, 189, 248, 0.2);
 }
 
 /* =========================
@@ -298,6 +347,67 @@ body {
 }
 
 /* =========================
+   PROJECT DETAIL
+========================= */
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.detail-card {
+    padding: 24px;
+}
+
+.detail-card h3 {
+    margin-bottom: 10px;
+    color: #f8fafc;
+}
+
+.detail-card p + p {
+    margin-top: 15px;
+}
+
+.detail-icon {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.detail-card ul,
+.highlight-card ul {
+    margin: 12px 0 0 20px;
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+.detail-card li,
+.highlight-card li {
+    margin-bottom: 8px;
+}
+
+.highlight-card {
+    padding: 28px;
+}
+
+.technical-flow {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.project-video-section {
+    margin-bottom: 20px;
+}
+
+.page-actions {
+    text-align: center;
+    margin: 45px 0 10px;
+}
+
+/* =========================
    VIDEO
 ========================= */
 
@@ -340,7 +450,7 @@ body {
 }
 
 /* =========================
-   EXPERIENCE
+   EXPERIENCE / ABOUT
 ========================= */
 
 .experience-section {
@@ -371,10 +481,6 @@ body {
 .experience-card.compact p {
     max-width: 900px;
 }
-
-/* =========================
-   ABOUT
-========================= */
 
 .about-section {
     margin-top: 65px;
@@ -412,7 +518,12 @@ body {
         padding: 65px 0;
     }
 
-    .hero h1 {
+    .project-hero {
+        padding: 55px 0 45px;
+    }
+
+    .hero h1,
+    .project-hero h1 {
         font-size: 30px;
     }
 
@@ -426,7 +537,8 @@ body {
         margin: 10px auto;
     }
 
-    .performance-flow {
+    .performance-flow,
+    .technical-flow {
         flex-direction: column;
         align-items: center;
     }
@@ -438,5 +550,14 @@ body {
 
     .flow-arrow {
         transform: rotate(90deg);
+    }
+
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-button {
+        width: 100%;
+        text-align: center;
     }
 }
