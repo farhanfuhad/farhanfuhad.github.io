@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Farhan Fuhad — 5v5 Mobile MOBA technical project details.">
+    <title>5v5 MOBA Game System | Farhan Fuhad</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="project-hero">
+    <div class="container">
+        <a class="back-link" href="index.html">← Back to Portfolio</a>
+        <div class="badge">🎮 PERSONAL PROJECT · UNITY 6 · MULTIPLAYER</div>
+
+        <h1>5v5 Mobile MOBA<br>Game System</h1>
+
+        <p class="subhead">
+            A Unity 6 mobile MOBA prototype focused on multiplayer gameplay systems,
+            runtime content management, hero control, combat systems, UI, and mobile performance.
+        </p>
+
+        <div class="tech-stack">
+            <span class="tech-tag">Unity 6</span>
+            <span class="tech-tag">Netcode for GameObjects</span>
+            <span class="tech-tag">Addressables</span>
+            <span class="tech-tag">C#</span>
+            <span class="tech-tag">Mobile Optimization</span>
+            <span class="tech-tag">Multiplayer</span>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+
+    <section>
+        <div class="section-title">Project Overview</div>
+
+        <div class="detail-card">
+            <p>
+                This project is a personal 5v5 mobile MOBA prototype developed in Unity.
+                The work covers both gameplay-facing systems and the technical infrastructure
+                required to support a networked mobile game.
+            </p>
+
+            <p>
+                The project is structured around reusable hero data, networked player entities,
+                runtime asset loading, combat systems, skills, UI, camera and movement,
+                spawning/respawning, and mobile performance testing.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <div class="section-title">My Technical Involvement</div>
+
+        <div class="detail-grid">
+
+            <div class="detail-card">
+                <div class="detail-icon">🌐</div>
+                <h3>Multiplayer Architecture</h3>
+                <ul>
+                    <li>Implemented gameplay systems using Unity Netcode for GameObjects.</li>
+                    <li>Worked with networked player entities and ownership-based behaviour.</li>
+                    <li>Handled networked health, player state, spawning and gameplay interactions.</li>
+                    <li>Structured systems so gameplay logic can run correctly in a multiplayer environment.</li>
+                </ul>
+            </div>
+
+            <div class="detail-card">
+                <div class="detail-icon">🧩</div>
+                <h3>Hero & Character Systems</h3>
+                <ul>
+                    <li>Created data-driven hero configuration using HeroData.</li>
+                    <li>Connected hero stats such as HP, attack, attack speed and movement speed to gameplay.</li>
+                    <li>Implemented hero spawning and local-player control.</li>
+                    <li>Integrated character meshes, Animator states and gameplay controllers.</li>
+                </ul>
+            </div>
+
+            <div class="detail-card">
+                <div class="detail-icon">⚔️</div>
+                <h3>Combat & Basic Attack</h3>
+                <ul>
+                    <li>Developed a basic attack system with attack timing and cooldown handling.</li>
+                    <li>Implemented a multi-hit attack flow and animation-driven combat timing.</li>
+                    <li>Connected attack input to character animation and gameplay logic.</li>
+                    <li>Designed the system to support melee and projectile-based attack workflows.</li>
+                </ul>
+            </div>
+
+            <div class="detail-card">
+                <div class="detail-icon">✨</div>
+                <h3>Hero Skills</h3>
+                <ul>
+                    <li>Built reusable SkillData definitions for different skill types.</li>
+                    <li>Supported skill concepts including dash, projectile, AOE, buff, heal and targeted abilities.</li>
+                    <li>Implemented cooldown, range, damage, duration and mana-related parameters.</li>
+                    <li>Integrated skill input with the mobile skill UI.</li>
+                </ul>
+            </div>
+
+            <div class="detail-card">
+                <div class="detail-icon">📦</div>
+                <h3>Addressables & Runtime Assets</h3>
+                <ul>
+                    <li>Worked with Unity Addressables for runtime asset management.</li>
+                    <li>Structured hero and gameplay content around reusable data and asset references.</li>
+                    <li>Supported runtime loading of game content rather than relying only on direct scene references.</li>
+                    <li>Explored workflows suitable for scalable multiplayer game content.</li>
+                </ul>
+            </div>
+
+            <div class="detail-card">
+                <div class="detail-icon">🕹️</div>
+                <h3>Mobile Controls & Camera</h3>
+                <ul>
+                    <li>Implemented mobile movement using a floating joystick workflow.</li>
+                    <li>Developed third-person MOBA-style camera behaviour.</li>
+                    <li>Worked on local hero targeting and camera follow behaviour.</li>
+                    <li>Adjusted movement and camera response to achieve a responsive MOBA-style feel.</li>
+                </ul>
+            </div>
+
+            <div class="detail-card">
+                <div class="detail-icon">❤️</div>
+                <h3>Health, Spawn & Match Flow</h3>
+                <ul>
+                    <li>Implemented networked health using NetworkVariable-based state.</li>
+                    <li>Worked on player spawn, team assignment, death and respawn workflows.</li>
+                    <li>Structured match-level responsibilities around game management systems.</li>
+                    <li>Supported blue/red team spawning and multiplayer match flow.</li>
+                </ul>
+            </div>
+
+            <div class="detail-card">
+                <div class="detail-icon">📱</div>
+                <h3>Mobile Performance</h3>
+                <ul>
+                    <li>Tested the prototype on Android mobile hardware.</li>
+                    <li>Monitored draw calls, SetPass calls and rendering configuration.</li>
+                    <li>Worked on render scale and camera/rendering setup for mobile performance.</li>
+                    <li>Considered UI, minimap and rendering workloads when optimizing the project.</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <div class="section-title">Technical Workflow</div>
+
+        <div class="detail-card">
+            <div class="technical-flow">
+                <div class="flow-step"><strong>Hero Data</strong><span>Stats · skills · prefab</span></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><strong>Addressables</strong><span>Runtime content</span></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><strong>Netcode</strong><span>Networked entity</span></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><strong>Gameplay</strong><span>Movement · combat · skills</span></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><strong>Mobile</strong><span>Profile · optimize · test</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="section-title">What This Project Demonstrates</div>
+
+        <div class="project-card highlight-card">
+            <ul>
+                <li>Ability to work across gameplay, technical systems and content workflows.</li>
+                <li>Practical experience with Unity multiplayer architecture and networked gameplay.</li>
+                <li>Data-driven content setup using ScriptableObjects and Addressables.</li>
+                <li>Understanding of mobile game performance constraints and profiling.</li>
+                <li>Ability to connect technical implementation with player-facing game features.</li>
+                <li>Hands-on C# development and debugging across multiple interconnected systems.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="project-video-section">
+        <div class="section-title">Project Video</div>
+
+        <div class="video-card">
+            <div class="video-title">MOBA Gameplay System</div>
+            <div class="video-frame">
+                <iframe src="https://www.youtube.com/embed/vpZxAYbZ_sA" title="MOBA Gameplay System" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <div class="page-actions">
+        <a class="detail-button" href="index.html">← Back to Portfolio</a>
+    </div>
+
+</main>
+
+<footer class="footer">
+    © 2026 Farhan Fuhad — 5v5 MOBA Game System
+</footer>
+
+</body>
+</html>
