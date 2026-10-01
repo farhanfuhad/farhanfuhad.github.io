@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Farhan Fuhad — 5v5 Mobile MOBA technical project details.">
-    <title>5v5 MOBA Game System | Farhan Fuhad</title>
+    <title>5v5 Mobile MOBA Game System | Farhan Fuhad</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -92,6 +92,8 @@
                     <li>Developed a runtime Dynamic UI Atlas system to combine image assets into a shared atlas.</li>
                     <li>Designed the system so hero-related classes can request and register their required images into the atlas.</li>
                     <li>Centralized UI image management to reduce duplicated image handling across hero and gameplay UI.</li>
+                    <li>Reduced UI draw calls by grouping related images into the atlas.</li>
+                    <li>Balanced draw-call reduction against memory and loading cost, as a larger atlas can take additional time and memory to load.</li>
                     <li>Used the generated atlas for runtime UI presentation while keeping hero-specific content data-driven.</li>
                 </ul>
             </div>
@@ -159,7 +161,7 @@
                 <li>Practical experience with Unity multiplayer architecture and networked gameplay.</li>
                 <li>Data-driven content setup using ScriptableObjects and Addressables.</li>
                 <li>Runtime UI asset organization through a centralized Dynamic UI Atlas system.</li>
-                <li>Understanding of mobile game performance constraints and profiling.</li>
+                <li>Understanding of mobile game performance constraints, including draw calls, memory usage and loading time.</li>
                 <li>Ability to connect technical implementation with player-facing game features.</li>
                 <li>Hands-on C# development and debugging across multiple interconnected systems.</li>
                 <li>Technical Art pipeline automation through Editor-based asset validation.</li>
@@ -185,7 +187,7 @@
 </main>
 
 <footer class="footer">
-    © 2026 Farhan Fuhad — 5v5 MOBA Game System
+    © 2026 Farhan Fuhad — 5v5 Mobile MOBA Game System
 </footer>
 
 </body>
