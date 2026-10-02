@@ -91,6 +91,76 @@
     </section>
 
     <section>
+        <div class="section-title">Mesh-to-Mesh VFX Transition</div>
+        <div class="performance-card">
+            <div class="performance-copy">
+                <p>
+                    Created a <strong>mesh-based VFX transition</strong> where one 3D mesh can transform
+                    into another using a real-time particle effect. Instead of simply hiding Mesh A
+                    and revealing Mesh B, the transition uses VFX particles to visually break apart
+                    the source object and reform the target object.
+                </p>
+                <p>
+                    The workflow demonstrates how I can combine <strong>mesh data, particle behaviour,
+                    materials, animation timing, and real-time rendering</strong> to create a controlled
+                    transformation effect. The transition can be driven by parameters such as
+                    progress, particle movement, dissolve amount, scale, and timing.
+                </p>
+                <p>
+                    This type of effect can be used for character transformations, object changes,
+                    teleportation, magical transitions, cinematic reveals, and other real-time
+                    presentation effects.
+                </p>
+            </div>
+
+            <div class="performance-flow">
+                <div class="flow-step"><strong>Mesh A</strong><span>Source object</span></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><strong>VFX Particles</strong><span>Break apart / transition</span></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><strong>Mesh B</strong><span>Target object</span></div>
+            </div>
+        </div>
+
+        <div class="pipeline-grid">
+            <div class="pipeline-card">
+                <h3>🧩 Mesh-Based VFX</h3>
+                <p>
+                    Uses mesh information as part of the VFX transition, allowing the visual effect
+                    to follow the shape and surface of the objects rather than behaving like a
+                    generic particle effect.
+                </p>
+            </div>
+
+            <div class="pipeline-card">
+                <h3>✨ Procedural Transition</h3>
+                <p>
+                    The transformation can be controlled through exposed parameters, making it
+                    possible to adjust the transition speed, dissolve behaviour, particle motion,
+                    and final reveal without rebuilding the effect.
+                </p>
+            </div>
+
+            <div class="pipeline-card">
+                <h3>🎬 Cinematic Integration</h3>
+                <p>
+                    Designed for use with camera movement, Sequencer timing, animation, lighting,
+                    and other real-time VFX so the transformation can become part of a cinematic shot.
+                </p>
+            </div>
+
+            <div class="pipeline-card">
+                <h3>⚙️ Technical Art Approach</h3>
+                <p>
+                    Combines visual design with technical implementation, focusing on reusable
+                    controls, predictable behaviour, real-time iteration, and integration into
+                    an Unreal Engine production workflow.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section>
         <div class="section-title">Real-Time Production Workflow</div>
         <div class="performance-card">
             <div class="performance-copy">
@@ -156,6 +226,9 @@
         <div class="section-title">Tools & Technologies</div>
         <div class="tech-stack">
             <span class="tech-tag">Unreal Engine</span>
+            <span class="tech-tag">Unreal Sequencer</span>
+            <span class="tech-tag">Niagara VFX</span>
+            <span class="tech-tag">Mesh-Based VFX</span>
             <span class="tech-tag">Unity</span>
             <span class="tech-tag">Real-Time VFX</span>
             <span class="tech-tag">Animation</span>
