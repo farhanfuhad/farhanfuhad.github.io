@@ -150,18 +150,23 @@
                     movement reveals the relationship between the digital subject and the physical space.
                 </p>
                 <p>
-                    This demonstrates a <strong>real-time mixed-reality / virtual production workflow</strong>:
-                    the live camera input provides the real-world background and perspective, while
-                    Unreal Engine supplies the virtual character and digital content. The result is a
-                    combined view where the virtual character appears to exist within the captured
-                    physical environment rather than as a separate offline render.
+                    To make the digital character feel grounded in the real environment, I also used a
+                    <strong>shadow catcher</strong> to capture the character's shadow and merge it onto the
+                    real ground surface. This means the shadow is generated from the virtual character
+                    and integrated into the camera input rather than appearing as a separate floating
+                    graphic. As the character moves forward or changes position, the shadow updates with
+                    the character's movement, helping maintain the visual relationship between the
+                    virtual character and the real environment. Unreal Engine's real-time compositing
+                    workflow supports dedicated shadow/reflection catcher layers for merging CG shadows
+                    into a live-action plate. citeturn0search0turn0search5
                 </p>
                 <p>
-                    The workflow is based on the same core virtual-production principle of synchronizing
-                    real-world camera input with digital content so that movement and perspective remain
-                    consistent during the shot. Unreal Engine's virtual production workflows support
-                    camera tracking and live compositing for this type of real-time integration.
-                    citeturn0search1turn0search3
+                    This demonstrates a <strong>real-time mixed-reality / virtual production workflow</strong>:
+                    the live camera input provides the real-world background and perspective, while
+                    Unreal Engine supplies the virtual character and its supporting elements such as
+                    shadows. The result is a combined view where the virtual character and its shadow
+                    appear integrated into the captured physical environment rather than as a separate
+                    offline render.
                 </p>
             </div>
 
@@ -172,9 +177,9 @@
                 <div class="flow-arrow">→</div>
                 <div class="flow-step"><strong>Unreal Engine</strong><span>Virtual character</span></div>
                 <div class="flow-arrow">→</div>
-                <div class="flow-step"><strong>Real-Time Composite</strong><span>Character + camera input</span></div>
+                <div class="flow-step"><strong>Shadow Catcher</strong><span>Grounded CG shadow</span></div>
                 <div class="flow-arrow">→</div>
-                <div class="flow-step"><strong>Final View</strong><span>Virtual character in real surroundings</span></div>
+                <div class="flow-step"><strong>Real-Time Composite</strong><span>Character + shadow + camera input</span></div>
             </div>
         </div>
 
@@ -209,10 +214,19 @@
             </div>
 
             <div class="pipeline-card">
+                <h3>🌑 Shadow Catching</h3>
+                <p>
+                    Used a shadow-catcher workflow to integrate the virtual character's shadow
+                    with the real ground, keeping the shadow responsive to character movement
+                    during the live composite.
+                </p>
+            </div>
+
+            <div class="pipeline-card">
                 <h3>🎬 Production Support</h3>
                 <p>
-                    Troubleshot tracking, communication, alignment, and real-time presentation
-                    issues to keep the virtual production workflow operational.
+                    Troubleshot tracking, communication, alignment, compositing, and real-time
+                    presentation issues to keep the virtual production workflow operational.
                 </p>
             </div>
         </div>
@@ -230,6 +244,8 @@
             <span class="tech-tag">Live Camera</span>
             <span class="tech-tag">Virtual Production</span>
             <span class="tech-tag">Real-Time Rendering</span>
+            <span class="tech-tag">Real-Time Compositing</span>
+            <span class="tech-tag">Shadow Catcher</span>
             <span class="tech-tag">Niagara VFX</span>
             <span class="tech-tag">Audio-Reactive VFX</span>
             <span class="tech-tag">Face Tracking</span>
