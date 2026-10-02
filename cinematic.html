@@ -181,6 +181,84 @@
                 <iframe src="https://www.youtube.com/embed/q9hhEenV5Z8" title="Unreal Engine VFX Experiment" allowfullscreen></iframe>
             </div>
         </div>
+
+        <div class="pipeline-grid">
+            <div class="pipeline-card">
+                <h3>🎯 Stencil-Based Ground Effect</h3>
+                <p>
+                    Built a <strong>stencil-based ground effect</strong> to create the impression of depth
+                    without relying on a fully modelled 3D surface. A flat image is used as the visual
+                    base, while the stencil controls where the effect is revealed on the ground.
+                </p>
+                <p>
+                    This approach allows a simple 2D image to read as a more dimensional surface by
+                    controlling the visible region, perspective, and layering of the effect directly
+                    in the material.
+                </p>
+            </div>
+
+            <div class="pipeline-card">
+                <h3>🔄 Tiling & Animated Texture</h3>
+                <p>
+                    Used <strong>tiling texture coordinates</strong> and animated UV movement to keep the
+                    ground effect visually active. Rather than displaying a static image, the texture
+                    continuously moves and repeats across the surface to create the feeling of an
+                    evolving, living effect.
+                </p>
+                <p>
+                    The tiling and movement can be adjusted through material parameters, allowing
+                    the speed, scale, and direction of the effect to be tuned without changing the
+                    underlying asset.
+                </p>
+            </div>
+
+            <div class="pipeline-card">
+                <h3>💥 HUD Impact Effect</h3>
+                <p>
+                    Added a <strong>HUD-based impact effect</strong> to extend the visual feedback beyond
+                    the world-space VFX. Screen-space elements appear during the impact moment to
+                    reinforce the hit and make the action feel more immediate to the player.
+                </p>
+                <p>
+                    Combining world-space effects with HUD feedback creates a layered presentation:
+                    the environment communicates the physical impact while the HUD communicates the
+                    intensity directly through the player's screen.
+                </p>
+            </div>
+
+            <div class="pipeline-card">
+                <h3>⚙️ Real-Time Material Control</h3>
+                <p>
+                    The effect is designed around reusable material and VFX controls, allowing
+                    parameters such as texture scale, tiling, animation speed, reveal intensity,
+                    and impact timing to be adjusted during iteration.
+                </p>
+            </div>
+        </div>
+
+        <div class="performance-card">
+            <div class="performance-copy">
+                <p>
+                    <strong>Delivery process:</strong> start with a flat visual asset, define the
+                    stencil region that controls where the ground effect appears, then use tiled and
+                    animated texture coordinates to introduce motion. The effect is layered with
+                    additional VFX and a screen-space HUD impact treatment to create a stronger final
+                    presentation.
+                </p>
+            </div>
+
+            <div class="performance-flow">
+                <div class="flow-step"><strong>Flat Image</strong><span>Base visual</span></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><strong>Stencil</strong><span>Control the visible area</span></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><strong>Tiling + UV Motion</strong><span>Create living movement</span></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><strong>VFX Layer</strong><span>Enhance the effect</span></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><strong>HUD Impact</strong><span>Sell the hit</span></div>
+            </div>
+        </div>
     </section>
 
     <section>
