@@ -143,43 +143,52 @@
                     rendered in <strong>Unreal Engine</strong>.
                 </p>
                 <p>
+                    To make the virtual scene match the physical location, I recreated the room and
+                    surrounding environment in Unreal Engine at <strong>1:1 real-world scale</strong>.
+                    I measured the physical space and built the corresponding virtual geometry so that
+                    walls, floor boundaries, and other spatial elements occupied matching positions in
+                    the digital environment. This provided a spatial reference for the virtual character
+                    and helped keep the real camera view and Unreal scene aligned.
+                </p>
+                <p>
                     In the demonstration, I move the camera around the physical space to show that
                     there is no physical character present in the environment. Instead, the display
                     shows a <strong>virtual character captured and composited into the live camera view</strong>.
-                    The character is positioned within the real-world surroundings so that the camera
-                    movement reveals the relationship between the digital subject and the physical space.
+                    Because the virtual environment mirrors the real room dimensions, the character
+                    can be positioned relative to the same spatial boundaries seen by the camera.
                 </p>
                 <p>
-                    To make the digital character feel grounded in the real environment, I also used a
-                    <strong>shadow catcher</strong> to capture the character's shadow and merge it onto the
-                    real ground surface. This means the shadow is generated from the virtual character
-                    and integrated into the camera input rather than appearing as a separate floating
-                    graphic. As the character moves forward or changes position, the shadow updates with
-                    the character's movement, helping maintain the visual relationship between the
-                    virtual character and the real environment. Unreal Engine's real-time compositing
-                    workflow supports dedicated shadow/reflection catcher layers for merging CG shadows
-                    into a live-action plate. citeturn0search0turn0search5
+                    I also used a <strong>shadow catcher</strong> to capture the character's shadow and
+                    merge it onto the real ground surface. The 1:1 environment setup gives the virtual
+                    lighting and shadow system a matching spatial reference. For example, when the
+                    virtual character moves closer to a real wall, the corresponding virtual wall
+                    position in Unreal provides the correct spatial relationship for the character's
+                    shadow and lighting interaction. This helps the shadow remain visually connected
+                    to the real environment instead of behaving like a flat overlay.
                 </p>
                 <p>
                     This demonstrates a <strong>real-time mixed-reality / virtual production workflow</strong>:
-                    the live camera input provides the real-world background and perspective, while
-                    Unreal Engine supplies the virtual character and its supporting elements such as
-                    shadows. The result is a combined view where the virtual character and its shadow
-                    appear integrated into the captured physical environment rather than as a separate
-                    offline render.
+                    the live camera provides the real-world background and perspective, while Unreal
+                    Engine provides the virtual character, matched environment geometry, lighting, and
+                    shadow information. Unreal's virtual production workflows rely on matching the
+                    physical camera and virtual camera and maintaining spatial alignment so camera
+                    movement produces the correct perspective and parallax in the digital scene.
+                    citeturn0search0turn0search11
                 </p>
             </div>
 
             <div class="performance-flow">
-                <div class="flow-step"><strong>Blackmagic Camera</strong><span>Live physical environment</span></div>
+                <div class="flow-step"><strong>Real Room</strong><span>Measure physical dimensions</span></div>
                 <div class="flow-arrow">→</div>
-                <div class="flow-step"><strong>Camera Movement</strong><span>Moving viewpoint</span></div>
+                <div class="flow-step"><strong>1:1 Unreal Environment</strong><span>Matched walls / floor / space</span></div>
                 <div class="flow-arrow">→</div>
-                <div class="flow-step"><strong>Unreal Engine</strong><span>Virtual character</span></div>
+                <div class="flow-step"><strong>Blackmagic Camera</strong><span>Live physical view</span></div>
+                <div class="flow-arrow">→</div>
+                <div class="flow-step"><strong>Virtual Character</strong><span>Real-time CG content</span></div>
                 <div class="flow-arrow">→</div>
                 <div class="flow-step"><strong>Shadow Catcher</strong><span>Grounded CG shadow</span></div>
                 <div class="flow-arrow">→</div>
-                <div class="flow-step"><strong>Real-Time Composite</strong><span>Character + shadow + camera input</span></div>
+                <div class="flow-step"><strong>Real-Time Composite</strong><span>Character + environment interaction</span></div>
             </div>
         </div>
 
@@ -194,6 +203,14 @@
                 <p>
                     Configured the software and hardware connections required to move live
                     tracking data from the motion-capture system into Unreal Engine.
+                </p>
+            </div>
+
+            <div class="pipeline-card">
+                <h3>📐 1:1 Environment Matching</h3>
+                <p>
+                    Recreated the physical room at matching real-world scale inside Unreal Engine,
+                    using the room dimensions and spatial layout as a reference for virtual content.
                 </p>
             </div>
 
@@ -217,8 +234,8 @@
                 <h3>🌑 Shadow Catching</h3>
                 <p>
                     Used a shadow-catcher workflow to integrate the virtual character's shadow
-                    with the real ground, keeping the shadow responsive to character movement
-                    during the live composite.
+                    with the real ground, using the matched environment to maintain the correct
+                    spatial relationship as the character moves.
                 </p>
             </div>
 
@@ -246,6 +263,7 @@
             <span class="tech-tag">Real-Time Rendering</span>
             <span class="tech-tag">Real-Time Compositing</span>
             <span class="tech-tag">Shadow Catcher</span>
+            <span class="tech-tag">1:1 Environment Matching</span>
             <span class="tech-tag">Niagara VFX</span>
             <span class="tech-tag">Audio-Reactive VFX</span>
             <span class="tech-tag">Face Tracking</span>
