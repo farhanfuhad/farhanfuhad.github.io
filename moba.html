@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Farhan Fuhad — 5v5 Mobile MOBA technical project details.">
-    <title>5v5 Mobile MOBA Game System | Farhan Fuhad</title>
+    <meta name="description" content="Farhan Fuhad — Mastra, a 5v5 mobile MOBA technical art and game development project.">
+    <title>Mastra | 5v5 Mobile MOBA · Farhan Fuhad</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,13 +18,13 @@
 <header class="project-hero">
     <div class="container">
         <a class="back-link" href="index.html">← Back to Portfolio</a>
-        <div class="badge">🎮 UNITY 6 · MULTIPLAYER</div>
+        <div class="badge">🎮 MASTRA · UNITY 6 · 5v5 MOBILE MOBA</div>
 
-        <h1>5v5 Mobile MOBA<br>Game System</h1>
+        <h1>Mastra<br><span>5v5 Mobile MOBA</span></h1>
 
         <p class="subhead">
-            A Unity 6 mobile MOBA prototype focused on multiplayer gameplay systems,
-            runtime content management, hero control, skills, UI, and mobile performance.
+            A personal Unity 6 mobile MOBA project focused on multiplayer gameplay systems,
+            technical art, runtime content, performance optimization, and production workflows.
         </p>
 
         <div class="tech-stack">
@@ -32,8 +32,9 @@
             <span class="tech-tag">Netcode for GameObjects</span>
             <span class="tech-tag">Addressables</span>
             <span class="tech-tag">C#</span>
+            <span class="tech-tag">Blender</span>
             <span class="tech-tag">Mobile Optimization</span>
-            <span class="tech-tag">Multiplayer</span>
+            <span class="tech-tag">Game DevOps</span>
         </div>
     </div>
 </header>
@@ -45,15 +46,16 @@
 
         <div class="detail-card">
             <p>
-                This project is a 5v5 mobile MOBA prototype developed in Unity.
-                The work covers gameplay-facing systems and technical infrastructure
-                required to support a networked mobile game.
+                <strong>Mastra</strong> is a 5v5 mobile MOBA prototype developed in Unity 6.
+                The project explores the systems required to build a networked mobile game,
+                from hero gameplay and runtime content to technical art, asset optimization,
+                performance diagnostics, and development automation.
             </p>
 
             <p>
                 The project is structured around reusable hero data, networked player entities,
-                runtime asset loading, skills, UI, camera and movement,
-                spawning/respawning, and mobile performance testing.
+                runtime asset loading, skills, UI, camera and movement, spawning/respawning,
+                mobile profiling, and repeatable development workflows.
             </p>
         </div>
     </section>
@@ -122,6 +124,24 @@
             </div>
 
             <div class="detail-card">
+                <div class="detail-icon">🧩</div>
+                <h3>Blender — Mobile Asset Optimization</h3>
+                <ul>
+                    <li>Used Blender to prepare and optimize 3D assets for the constraints of mobile hardware.</li>
+                    <li>Reduced unnecessary geometry while preserving the asset silhouette and important visual details.</li>
+                    <li>Reviewed topology and polygon density to avoid spending geometry budget where it does not contribute to the final image.</li>
+                    <li>Reduced material slots where possible to help lower rendering overhead and draw-call cost.</li>
+                    <li>Considered UV usage and LOD preparation as part of the game-ready asset workflow.</li>
+                    <li>Validated optimized assets in Unity rather than evaluating the asset only inside Blender.</li>
+                </ul>
+
+                <p class="optimization-goal">
+                    <strong>Optimization Goal:</strong>
+                    Balance visual quality with polygon, material, memory, and rendering limitations on mobile devices.
+                </p>
+            </div>
+
+            <div class="detail-card">
                 <div class="detail-icon">❤️</div>
                 <h3>Health, Spawn & Match Flow</h3>
                 <ul>
@@ -176,6 +196,8 @@
 
         <div class="detail-card">
             <div class="technical-flow">
+                <div class="flow-step"><strong>Blender</strong><span>Optimize assets</span></div>
+                <div class="flow-arrow">→</div>
                 <div class="flow-step"><strong>Hero Data</strong><span>Stats · skills · prefab</span></div>
                 <div class="flow-arrow">→</div>
                 <div class="flow-step"><strong>Addressables</strong><span>Runtime content</span></div>
@@ -202,6 +224,7 @@
                 <li>Practical experience with Unity multiplayer architecture and networked gameplay.</li>
                 <li>Data-driven content setup using ScriptableObjects and Addressables.</li>
                 <li>Runtime UI asset organization through a centralized Dynamic UI Atlas system.</li>
+                <li>3D asset optimization for mobile, balancing geometry, materials and visual quality.</li>
                 <li>Understanding of mobile game performance constraints, including draw calls, memory usage and loading time.</li>
                 <li>Performance monitoring through self-reporting diagnostics with captured game snapshots and supporting performance details.</li>
                 <li>Ability to set up a local multiplayer testing environment for frequent debugging and gameplay validation.</li>
@@ -217,9 +240,9 @@
         <div class="section-title">Project Video</div>
 
         <div class="video-card">
-            <div class="video-title">MOBA Gameplay System</div>
+            <div class="video-title">Mastra — 5v5 Mobile MOBA Gameplay System</div>
             <div class="video-frame">
-                <iframe src="https://www.youtube.com/embed/vpZxAYbZ_sA" title="MOBA Gameplay System" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/vpZxAYbZ_sA" title="Mastra 5v5 Mobile MOBA Gameplay System" allowfullscreen></iframe>
             </div>
         </div>
     </section>
@@ -231,7 +254,7 @@
 </main>
 
 <footer class="footer">
-    © 2026 Farhan Fuhad — 5v5 Mobile MOBA Game System
+    © 2026 Farhan Fuhad — Mastra · 5v5 Mobile MOBA
 </footer>
 
 </body>
